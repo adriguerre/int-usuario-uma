@@ -1,0 +1,46 @@
+
+
+body {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0;
+}
+
+#header-header{
+    padding: 0 0 0 30px;
+    height: 80px;
+    background: rgb(179, 152, 64);
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+ul li{
+    display: inline-block;
+    padding: 0 10px;
+    list-style: none;
+}
+
+a{
+    color: rgb(0, 0, 0);
+      text-decoration: none;
+}
+
+a:hover{
+    color: #fff;
+}
+
+#log{
+    margin-left: 1000px;
+}
+
+#log:hover{
+    color: white;
+}
+
+section {
+    flex: 0.8;
+    padding: 15px;
+}
