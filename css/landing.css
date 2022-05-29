@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#header {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
+.navbar {
+  padding: 50px 0;
+}
+
+.nav-item {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-left: 50px;
+}
+
+.nav-link {
+  color: #ccc !important;
+  letter-spacing: 2px;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  background: #dcdde1 !important;
+  color: #262626 !important;
+  border-radius: 5px;
+  transition: all 0.6s ease 0s;
+}
+
+.main {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/bg-navbar.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 280px 0 220px;
+}
+
+.main h2 {
+  font-size: 2.6em;
+  padding-top: 60px;
+  color: #dcdde1;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.main p {
+  margin-top: 1em;
+  padding: 0;
+  font-size: 25px;
+  color: #ccc;
+  padding-bottom: 25px;
+}
+
+.main .registrar {
+  background: #a57f49;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.main .registrar:hover {
+  background: #5c3d12;
+  color: #fff;
+}
+
+.main-2 {
+  position: relative;
+  background: #232327;
+  background-size: 2000px 2200px;
+  background-position: center;
+  padding: 50px 80px 266px;
+}
+
+@media (max-width: 600px) {
+  .main-2 {
+    position: relative;
+    background: url("../img/bg-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 50px 80px 266px;
+  }
+  .scroll {
+    text-align: center;
+    padding-top: 80%;
+  }
+}
+
+.main-2 .leer-mas {
+  background: #a57f49;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+@media (min-width: 700px) {
+  .vl {
+    border-left: 6px solid #a57f49;
+    height: 300px;
+  }
+  nav {
+    position: sticky;
+    /* sticky or fixed are fine */
+    position: fixed;
+    top: 0;
+    height: 69px;
+    width: 100%;
+    background: linear-gradient(to bottom, #000, #0003 70%, #0000);
+    /* background when scroll is in the top */
+    transition: background .5s;
+    /* control how smooth the background changes */
+  }
+  .scroll {
+    text-align: center;
+    padding-top: 20%;
+  }
+  nav.scrolled {
+    background: #0a0a0a;
+  }
+  main {
+    height: 200vh;
+  }
+}
+
+.fixed-top.scrolled {
+  background-color: #2b2b2b !important;
+  transition: background-color 200ms linear;
+}
+/*# sourceMappingURL=landing.css.map */

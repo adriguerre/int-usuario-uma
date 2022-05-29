@@ -1,0 +1,51 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Winters
+  Date: 27/05/2022
+  Time: 12:43
+  To change this template use File | Settings | File Templates.
+--%>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/login.css" />
+    <title>Inicia sesión para acceder a todas las funcionalidades de EAM</title>
+</head>
+
+<body>
+<section class="main">
+    <h1 class="texto">Inicia Sesion en <span style="color: rgba(248,203,138,1);">EAM</span> para poder disfrutar con <span style="color: rgba(248,203,138,1);">Miles de personas</span>!
+       <span style="font-size: 10px">
+
+           Todos los datos son obligatorios (*)
+           
+                 <br>
+                 <span style="color: #FF0000; font-size: 15px;"></span>
+         
+       </span>
+    </h1>
+
+
+    <a href="/" class="atras"><span class="atras_texto">Atrás</a>
+    <form method="POST" action="/login" class="needs-validation" novalidate>
+        <span class="email">Correo</span>
+        <span class="pass">Contraseña</span>
+        <input type="text" title="email" class="textoEmail" name="email" required>
+        <input type="password" title="contraseña" class="textoPass" name="password" required>
+
+
+        <input type="checkbox" title="recordarContraseña" class="recordarContra">
+
+        <a href="/register" class="registro">¿No tienes una cuenta? Registraste ahora</a>
+        <a href="#" class="olvidoContra">Has olvidado la contraseña?</a>
+        <button type="submit" class="boton">Iniciar Sesión</button>
+    </form>
+    <span class="textoRecordar">Recordar contraseña</span>
+</section>
+</body>
+
+</html>

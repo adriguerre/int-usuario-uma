@@ -1,0 +1,79 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Andrés
+  Date: 26/05/2022
+  Time: 15:52
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./css/register.css" rel="stylesheet" />
+    <title>Registrate para acceder a todas las funcionalidades de EAM</title>
+</head>
+
+<body>
+<section class="divText">
+
+    <% String errorMail = (String)request.getAttribute("errorEmail");
+        String errorPass = (String)request.getAttribute("errorPass");
+        String errorUser = (String)request.getAttribute("error");
+        String vacio = (String)request.getAttribute("vacio");
+    %>
+
+    <h1 class="lText"><span style="color: rgba(248,203,138,1);">Registrate</span> ahora para obtener todas las <span style="color: rgba(248,203,138,1);">funcionalidades</span> y <span style="color: rgba(248,203,138,1);">descubrir</span> un espacio nuevo
+        <span style="font-size: 17px">
+           * Todos los datos son obligatorios
+        </span>
+        <% if(vacio != null){ %>
+        <br>
+        <span style="color: #FF0000; font-size: 20px;"><%= vacio %></span>
+        <%}%>
+    </h1>
+
+    <a href="/" class="atras"><span class="atras_texto">Atrás</a>
+    <div class="name"></div>
+
+    <!--Cuando se ponga el action quitar el a y poner el button del boton de registrarse-->
+    <form method="POST" action="/register">
+
+        <span class="lUser">Usuario *
+        <% if(errorUser != null){ %>
+        <span style="color: #FF0000; font-size: 17px;"><%= errorUser %></span>
+        <%}%>
+        </span>
+
+        <input type="text" title="usuario" class="usuario" name="usuario">
+        <span class="lEmail">Correo *
+        <% if(errorUser != null){ %>
+        <span style="color: #FF0000; font-size: 17px;"><%= errorUser %></span>
+        <%}%>
+
+        </span>
+        <input type="text" title="email" class="email" name="email">
+        <span class="lEmailConf">Confirmar correo *
+        <% if(errorMail != null){ %>
+        <span style="color: #FF0000; font-size: 17px;"><%= errorMail %></span>
+        <%}%>
+        </span>
+        <input type="text" title="confirmarCorreo" class="confirmarEmail" name="confirmarEmail">
+        <span class="lPass">Contraseña *
+        <% if(errorPass != null){ %>
+        <span style="color: #FF0000; font-size: 17px;"><%= errorPass %></span>
+        <%}%>
+        </span>
+        <input type="password" title="contraseña" class="password" name="password">
+        <span class="lPassConf">Confirmar contraseña *</span>
+        <input type="password" title="contraseña" class="confirmPassword" name="confirmPassword">
+
+        <input type="submit" class="boton" value="Registrarse">
+    </form>
+
+</section>
+</body>
+
+</html>

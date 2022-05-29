@@ -1,5 +1,6 @@
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <!-- Required meta tags -->
@@ -7,177 +8,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css" />
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/landing.css" />
-    <title>EAM</title>
+    <title>EAM: Empresa Aeuronaútica Malagueña</title>
 </head>
 
 <body>
-	<!--Header-->
-    <section id="header">
-        <div class="container-fluid">
-            <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
-                <div class="container" style="padding-top: 20px">
-                  <a class="navbar-brand" href="#">EAM</a>
-                  <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  >
+<!--Header-->
+<section id="header">
+    <%    UserEntity usuario = (UserEntity) session.getAttribute("usuario"); %>
+    <div class="container-fluid">
+        <nav id="barra" class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+            <div class="container" style="padding-top: 20px">
+                <a class="navbar-brand" href="#">EAM</a>
+                <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                >
                     <span class="navbar-toggler-icon"></span>
-                  </button>
-          
-                  <div class="collapse navbar-collapse" id="navbarNav">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="mx-auto"></div>
                     <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Noticias</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Historia Espacial</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Foro</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Noticias</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Login</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-        </div>
-    </section>
-    <!--Header end-->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Noticias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Historia Espacial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Foro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Noticias</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link text-white" href="/login">Iniciar Sesion</a>
+                            
 
-    <!--Main-->
-    <section class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h2>Bienvenido a EAM</h2>
-                    <p>Registrate en EAM para poder obtener todos los beneficios!</p>
-                    <a href="" class="registrar">Registrate</a>
+
+
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+    </div>
+</section>
+<!--Header end-->
+
+<!--Main-->
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+   
+                <h1 class="text-white">Bienvenido a EAM</h1>
+                <p>Registrate en EAM para poder obtener todos los beneficios!</p>
+                <a href="/register" class="registrar">Registrate</a>
+            </div>
         </div>
-    </section>
+    </div>
+    <div class="scroll">
+        <img src="img/gif_scroll.gif" width="10%">
+    </div>
+</section>
 
-    <!--Main end-->
+<!--Main end-->
 
-        <!--Main-->
-        <section class="main-2">
-          <h1 class="text-white text-center">Empresa Aeronaútica Malagueña</h1>
-          <hr style="width: 30%; margin: 0 30% 0 35%; height:6px; color: #43BEA1;" >
-          <div class="container" style="padding-top: 20px;">
-              <div class="row">
-                  <div class="col-sm-12 col-md-6 text-white">
-                        <img src="img/gif_astronauta_news.gif" width="90%" alt="">
-                  </div>
+<!--Main-->
+<section class="main-2">
+    <h2 class="text-white text-center">Empresa Aeronaútica Malagueña</h2>
+    <hr style="width: 30%; margin: 0 30% 0 35%; height:6px; color: #417c9c; opacity: 100;" >
+    <div class="container" style="padding-top: 20px;">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 text-white">
+                <img src="img/animation_500_l3j3p53b.gif" width="90%" alt="gif_astronauta">
+            </div>
 
-                  <div class="col-sm-12 col-md-4 text-white" style="padding-top: 60px;">
-                    <h1 class="text-center" style="color: rgb(165, 127, 73)";>Noticias</h1>
-                    <hr style="width: 30%; margin: 0 30% 0 35%; height:6px; color: #43BEA1;" >
+            <div class="col-sm-12 col-md-6 text-white" style="padding-top: 60px;">
+                <h1 class="text-center" style="color: rgb(165, 127, 73)">Historia</h1>
+                <hr style="width: 30%; margin: 0 30% 0 35%; height:6px; color: #417c9c; opacity: 100;" >
 
-                    <p style="padding-top: 20px; padding-bottom: 20px; font-size: 20px">Desde el apartado de noticias podrás estar informado de todos los sucesos que ocurran, y así podrás estar al día
-                      de las investigaciones que se estan realizando en estos momentos!
-                    </p>
-                    <a href="" class="leer-mas">Leer más</a>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-12 col-md-12 text-white" style="padding-top: 60px;">
-                  <h1 class="text-center" style="color: rgb(165, 127, 73)">Historia Espacial</h1>
-                  <hr style="width: 30%; margin: 0 30% 0 35%; height:6px; color: #43BEA1;" >
-                  <div style="padding-top: 20px">
-                    <span style="font-size: 25px; padding-top: 20px; color: rgb(165, 127, 73);">Historia destacada del dia: </span>
-                    <span style="font-size: 25px; " > Homenaje musical a la astronomía</span>
-                  </div>
-                  
-                  <p style="padding-top: 20px; font-size: 20px">Melodías y astronomía se encuentran este sábado 7 de mayo en el concierto
-                     Música en el espacio. Hasta 185 alumnos pertenecientes al Conservatorio Profesional Sebastián Durón de Guadalajara 
-                     formarán parte del evento que tendrá lugar a partir de las seis de la tarde en el observatorio de la localidad de 
-                     Yebes, en el que se interpretarán piezas relacionadas con el estudio del universo. Se trata del primer acontecimiento
-                      de estas características que se celebra en el espacio de observación astronómica más importante del Instituto
-                       Geográfico Nacional (IGN) y el único de Castilla-La Mancha que está incluido en el mapa de Infraestructuras 
-                       Científicas y Técnicas Singulares (ICTS) de España.
-                    </p> 
-                    <p style="padding-top: 20px; font-size: 20px">
-                      Desde clásicos como el movimiento Claro de Luna de la Suite Bergamasque de Claude Debussy hasta obras contemporáneas
-                       como el tema principal de la película Interstellar compuesto por Hans Zimmer formarán parte de la selección realizada
-                        por la dirección y el profesorado del conservatorio. La interpretación de las piezas, que durará aproximadamente dos horas y media, 
-                      se dividirá en distintos escenarios dentro del recinto que los espectadores podrán visitar en un recorrido itinerante.
-                  </p>
-                  <p style="padding-bottom: 20px; font-size: 20px">
-                  Los presentes disfrutarán del grupo de saxofones en los accesos al radomo, de las actuaciones individuales en
-                   el pabellón de gravimetría y de las orquestas de cuerda en la plaza circular del radiotelescopio Jorge Juan.
-                    La más destacada actuación del evento, que también supondrá su conclusión, corre a cargo de los 75 miembros
-                     de la Banda Sinfónica de Enseñanzas Profesionales 
-                  en el enclave visual más atractivo del observatorio: la antena de 40 metros de diámetro denominada Aries XXI.
+                <p style="padding-top: 20px; padding-bottom: 20px; font-size: 120%">Desde el apartado de historia
+                    podrás estar informado de todos los sucesos que han ocurrido, y así podrás estar al día
+                    de las investigaciones que se estan realizando en estos momentos!
                 </p>
-                  <a href="#" class="leer-mas">Leer más</a>
-              </div>
+                <a href="#" class="leer-mas">Leer más</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 text-white" style="padding-top: 60px;">
+                <h1 class="text-center" style="color: rgb(165, 127, 73)">Noticias</h1>
+                <hr style="width: 30%; margin: 0 30% 0 35%; height:6px; color: #417c9c;opacity: 100;" >
+                <div style="padding-top: 20px">
+                    <span style="font-size: 160%; padding-top: 20px; color: rgb(165, 127, 73);">Noticia destacada del dia: </span>
+                    <span style="font-size: 150%; " > Homenaje musical a la astronomía</span>
+                </div>
 
-              <div class="row">
+                <p style="padding-top: 20px; font-size: 130%">Melodías y astronomía se encuentran este sábado 7 de mayo en el concierto
+                    Música en el espacio. Hasta 185 alumnos pertenecientes al Conservatorio Profesional Sebastián Durón de Guadalajara
+                    formarán parte del evento que tendrá lugar a partir de las seis de la tarde en el observatorio de la localidad de
+                    Yebes, en el que se interpretarán piezas relacionadas con el estudio del universo. Se trata del primer acontecimiento
+                    de estas características que se celebra en el espacio de observación astronómica más importante del Instituto
+                    Geográfico Nacional (IGN) y el único de Castilla-La Mancha que está incluido en el mapa de Infraestructuras
+                    Científicas y Técnicas Singulares (ICTS) de España.
+                </p>
+                <p style="padding-top: 20px; font-size: 130%">
+                    Desde clásicos como el movimiento Claro de Luna de la Suite Bergamasque de Claude Debussy hasta obras contemporáneas
+                    como el tema principal de la película Interstellar compuesto por Hans Zimmer formarán parte de la selección realizada
+                    por la dirección y el profesorado del conservatorio. La interpretación de las piezas, que durará aproximadamente dos horas y media,
+                    se dividirá en distintos escenarios dentro del recinto que los espectadores podrán visitar en un recorrido itinerante.
+                </p>
+                <p style="padding-bottom: 20px; font-size: 130%">
+                    Los presentes disfrutarán del grupo de saxofones en los accesos al radomo, de las actuaciones individuales en
+                    el pabellón de gravimetría y de las orquestas de cuerda en la plaza circular del radiotelescopio Jorge Juan.
+                    La más destacada actuación del evento, que también supondrá su conclusión, corre a cargo de los 75 miembros
+                    de la Banda Sinfónica de Enseñanzas Profesionales
+                    en el enclave visual más atractivo del observatorio: la antena de 40 metros de diámetro denominada Aries XXI.
+                </p>
+                <a href="#" class="leer-mas">Leer más</a>
+            </div>
+
+            <div class="row">
                 <div class="col-sm-11 col-md-6 text-white" style="padding-top: 120px;">
-                  <h1 class="text-center" style="color: rgb(165, 127, 73)">Curiosidades</h1>
-                  <hr style="width: 30%; margin: 0 30% 0 35%; height:6px; color: #43BEA1;" >
-
-                  <p style="padding-top: 20px; padding-bottom: 20px; font-size: 20px">Participa en los mejores minijuegos y
-                     aprende miles de curiosidades sobre nuestro planeta así como de 
-                      todo el universo, unete ya y empieza a disfrutar!
-                  </p>
-                  <a href="#" class="leer-mas">Empezar a jugar</a>  
+                    <h1 class="text-center" style="color: rgb(165, 127, 73)">Curiosidades</h1>
+                    <hr style="width: 30%; margin: 0 30% 0 35%; height:6px; color: #417c9c; opacity: 100;" >
+                    <p style="padding-top: 20px; padding-bottom: 20px; font-size: 130%">Participa en los mejores minijuegos y
+                        aprende miles de curiosidades sobre nuestro planeta así como de
+                        todo el universo, únete ya y empieza a disfrutar!
+                    </p>
+                    <a href="#" class="leer-mas">Comenzar</a>
                 </div>
                 <div class="col-sm-6 col-md-1 text-white hidden-xs" style="padding-top: 120px;">
-                  <div class="vl"></div>
+                    <div class="vl"></div>
                 </div>
                 <div class="col-sm-12 col-md-5 text-white" style="padding-top: 120px;">
-                  <h1 class="text-center" style="color: rgb(165, 127, 73)">Foro</h1>
-                  <hr style="width: 30%; margin: 0 30% 0 35%; height:6px; color: #43BEA1;" >
+                    <h1 class="text-center" style="color: rgb(165, 127, 73)">Foro</h1>
+                    <hr style="width: 30%; margin: 0 30% 0 35%; height:6px; color: #417c9c; opacity: 100;" >
 
-                  <p style="padding-top: 20px; font-size: 20px">Comienza a chatear con miles de personas de todo lo que nos rodea en el universo y descubre mas sobre este.  
-                  </p>
-                  <p style="padding-top: 20px;  padding-bottom: 20px;font-size: 20px">Esta comunidad es para profesionales y para personas aficionadas que acaban de empezar, pero entusiastas 
-                    en el sector, comparte y analiza los mejores temas y las nuevas ideas que haya sobre el universo.
-                  </p>
-                  <a href="#" class="leer-mas">Leer más</a>
+                    <p style="padding-top: 20px; font-size: 130%">Comienza a chatear con miles de personas de todo lo que nos rodea en el universo y descubre más sobre este.
+                    </p>
+                    <p style="padding-top: 20px;  padding-bottom: 20px;font-size: 130%">Esta comunidad es para profesionales y para personas aficionadas que acaban de empezar pero entusiastas
+                        en el sector, comparte y analiza los mejores temas y las nuevas ideas que haya sobre el universo.
+                    </p>
+                    <a href="#" class="leer-mas">Chatear ya</a>
                 </div>
             </div>
-            </div>
-           </div>
-          
-      </section>
+        </div>
+    </div>
+
+</section>
 
 
 
 
 
-    <footer class="py-3  bg-dark">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-        </ul>
-        <p class="text-center text-muted">© 2022 Grupo Q, Inc</p>
-    </footer>
+<footer class="py-3  bg-dark">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Historia Espacial</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Foro</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Preguntas mas frecuentes</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Curiosidades</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 Grupo Q, Inc</p>
+</footer>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
+<script src="../js/script.js"></script>
 </body>
 
 </html>
